@@ -1,0 +1,44 @@
+header {
+    background-image: url(/images/header2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    @media screen and (max-width: 1023px){
+        height: 300px;
+    }
+    @media screen and (max-width: 480px){
+        height: 200px;
+    }
+    /* nav { 
+        background-color: rgba(255,255,255,0.5)!important;
+        a {
+            color: #283593;
+            font-weight: 500;
+        }
+    } */
+}
+
+.welcome {
+    max-width: 700px;
+    margin: 30px auto;
+} 
+
+.learn-more-tests {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    @media screen and (max-width: 1023px){
+        justify-content: space-between;
+    }
+    @media screen and (max-width: 480px) {
+        
+    }
+    .card {
+        width: 45%;
+        @media screen and (max-width: 480px) {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "triage-web",
+  "version": "1.0.0",
+  "description": "triage-portal",
+  "main": "app.js",
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bahtirek@github",
+  "license": "ISC"
+}

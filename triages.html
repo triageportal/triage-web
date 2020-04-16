@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triage Portal</title>
+</head>
+<body>
+
+    <div class="body-wrap">
+        <div class="main">
+          <nav class="nav-wrapper indigo" id="navMenu">
+            <div class="container">
+                <a href="index.html" class="brand-logo">{{nav.title}}</a>
+                <a class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="triages.html" class="active">{{nav.tests}}</a></li>
+                    <li><a href="howtotest.html">{{nav.howToTest}}</a></li>
+                    <li><a href="https://triagetest.startng.app">{{nav.login}}</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+        <ul class="sidenav" id="mobile-links">
+            <li><a href="triages.html">{{sidenav.tests}}</a></li>
+            <li><a href="howtotest.html">{{sidenav.howToTest}}</a></li>
+            <li><a href="https://triagetest.startng.app">{{sidenav.login}}</a></li>
+        </ul>
+      <div class="container" id="triagesPage">
+        <h5 class="center-align page-title">{{title}}</h5>
+        <div class="learn-more-tests" id="learn-more-tests">
+            <div class="card" v-for="triage in triages">
+                <div class="card-content">
+                    <span class="card-title indigo-text">{{triage.name}}</span>
+                    <p>{{triage.description}}</p>
+                </div>
+                <div class="card-action right-align">
+                    <a v-bind:href="'triage.html?' + triage.id">{{learnMoreButton}}</a>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+      </div>
+      <footer class="page-footer indigo darken-4" id="footer">
+        <div class="container">
+            <div class="footer-copyright">
+
+                © 2020 Triage Portal
+                <ul class="right footer-menu">
+                    <li><a class="grey-text text-lighten-4" href="https://triagetest.startng.app/#/contactus">{{footer.contactUs}}</a></li>
+                    <li><a class="grey-text text-lighten-4 right dropdown-trigger" data-target='translateDropDown' >
+                        <i class="material-icons">translate</i>
+                    </a></li>
+                </ul>
+                <ul id='translateDropDown' class='dropdown-content'>
+                    <li><a @click="translate('en')">English</a></li>
+                    <li><a @click="translate('es')">Espanol</a></li>
+                    <li><a @click="translate('ru')">Pусский</a></li>
+                  </ul>
+            </div>
+        </div>
+    </footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>      
+      <script src="js/main.js"></script>
+      <script src="js/triages.js"></script>
+    <!-- <script type="text/javascript" src="js/materialize.min.js"></script>  -->
+</body>
+</html>
+

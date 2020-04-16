@@ -1,0 +1,81 @@
+@import "index";
+@import "triage";
+@import "./../css/iconfont/material-icons.less";
+
+/* Main style*/
+html,
+body {
+  min-height: 100vh;
+}
+
+.body-wrap {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+p {
+    
+  color: #666666;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.page-title {
+  color: #616161;
+  padding: 25px 0;
+  margin: 25px 0;
+
+  @media only screen and (max-device-width: 480px) {
+    padding: 15px 0;
+    margin: 15px 0;
+  }
+}
+
+nav {
+    height: 54px;
+    line-height: 54px;
+    .brand-logo {
+        font-size: 1.5rem;
+    }
+    a.sidenav-trigger i{
+        height: 54px;
+        line-height: 54px;  
+        cursor: pointer;
+    }
+    .active {
+        background-color: rgba(0,0,0,0.2);
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    .card-content {
+        flex: 1 0 auto;
+    }
+}
+
+.page-footer {
+  padding: 10px 0;
+}
+
+.footer-menu {
+  
+    margin: 0;    
+  
+  li {
+    display: inline;
+    .material-icons {
+      font-size: 20px;
+    }
+    .dropdown-trigger {
+      margin-left: 30px;
+    }
+  }
+}
+
+
+
