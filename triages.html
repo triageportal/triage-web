@@ -55,15 +55,16 @@
 
                 © 2020 Triage Portal
                 <ul class="right footer-menu">
-                    <li><a class="grey-text text-lighten-4" href="https://triagetest.startng.app/#/contactus">{{footer.contactUs}}</a></li>
+                    <!-- <li><a class="grey-text text-lighten-4" href="http://triagetest.startng.app/#/remote/ru/121212"  target="_blank">remote</a></li> -->
+                    <li><a class="grey-text text-lighten-4" @click="contactUs()" target="_blank">{{footer.contactUs}}</a></li>
                     <li><a class="grey-text text-lighten-4 right dropdown-trigger" data-target='translateDropDown' >
-                        <i class="material-icons">translate</i>
+                        <i class="material-icons">translate</i><span> - {{language}}</span>
                     </a></li>
                 </ul>
                 <ul id='translateDropDown' class='dropdown-content'>
-                    <li><a @click="translate('en')">English</a></li>
-                    <li><a @click="translate('es')">Espanol</a></li>
-                    <li><a @click="translate('ru')">Pусский</a></li>
+                    <li><a @click="translate('ENG')">English</a></li>
+                    <li><a @click="translate('ESP')">Espanol</a></li>
+                    <li><a @click="translate('RUS')">Pусский</a></li>
                   </ul>
             </div>
         </div>
@@ -71,9 +72,12 @@
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>      
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+      <script src="data/shared.content.js"></script>  
+      <script src="data/triages.content.js"></script>   
       <script src="js/main.js"></script>
       <script src="js/triages.js"></script>
+      
     <!-- <script type="text/javascript" src="js/materialize.min.js"></script>  -->
 </body>
 </html>

@@ -11,6 +11,24 @@ var triageAcssEn = {
             paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, sunt cum tenetur velit atque praesentium at, est mollitia dolores, aspernatur saepe explicabo illo temporibus repellat? Quos deleniti voluptatum mollitia magni?',
             img: '/images/photo_2020-04-15_14-36-41.jpg'
         }
+    ],
+    links: [
+        {
+            description: 'link1',
+            link: '#'
+        },
+        {
+            description: 'link2',
+            link: '#'
+        },
+        {
+            description: 'link3',
+            link: '#'
+        },
+        {
+            description: 'link4',
+            link: '#'
+        },
     ]
 }
 var triageAcssRu = {
@@ -26,6 +44,24 @@ var triageAcssRu = {
             paragraph: 'Лорем ипсум долор сит амет цонсецтетур адиписицинг елит. Итаяуе, сунт цум тенетур велит атяуе праесентиум ат, ест моллитиа долорес, аспернатур саепе ехплицабо илло темпорибус репеллат? Яуос деленити волуптатум моллитиа магни?',
             img: '/images/photo_2020-04-15_14-36-41.jpg'
         }
+    ],
+    links: [
+        {
+            description: 'link1',
+            link: '#'
+        },
+        {
+            description: 'link2',
+            link: '#'
+        },
+        {
+            description: 'link3',
+            link: '#'
+        },
+        {
+            description: 'link4',
+            link: '#'
+        },
     ]
 }
 var triageEjaculEn = {
@@ -41,6 +77,9 @@ var triageEjaculEn = {
             paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, sunt cum tenetur velit atque praesentium at, est mollitia dolores, aspernatur saepe explicabo illo temporibus repellat? Quos deleniti voluptatum mollitia magni?',
             img: '/images/photo_2020-04-15_14-36-41.jpg'
         }
+    ],
+    links: [
+        
     ]
 }
 var triageEjaculRu = {
@@ -56,6 +95,9 @@ var triageEjaculRu = {
             paragraph: 'Лорем ипсум долор сит амет цонсецтетур адиписицинг елит. Итаяуе, сунт цум тенетур велит атяуе праесентиум ат, ест моллитиа долорес, аспернатур саепе ехплицабо илло темпорибус репеллат? Яуос деленити волуптатум моллитиа магни?',
             img: '/images/photo_2020-04-15_14-36-41.jpg'
         }
+    ],
+    links: [
+        
     ]
 }
 
@@ -80,7 +122,7 @@ new Vue({
             }
         },
         fakeapi(id, lang){
-            if (lang == 'ru') {
+            if (lang == 'RUS') {
                 if (id == '1') {
                     return triageAcssRu;
                 } 

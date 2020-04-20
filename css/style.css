@@ -5,13 +5,6 @@ header {
   background-size: cover;
   width: 100%;
   height: 350px;
-  /* nav { 
-        background-color: rgba(255,255,255,0.5)!important;
-        a {
-            color: #283593;
-            font-weight: 500;
-        }
-    } */
 }
 @media screen and (max-width: 1023px) {
   header {
@@ -22,6 +15,9 @@ header {
   header {
     height: 200px;
   }
+}
+header nav {
+  opacity: 0.93;
 }
 .welcome {
   max-width: 700px;
@@ -39,16 +35,22 @@ header {
 }
 .learn-more-tests .card {
   width: 45%;
+  max-width: 450px;
 }
 @media screen and (max-width: 480px) {
   .learn-more-tests .card {
     width: 100%;
   }
 }
+/* triage page start*/
 .about-triage-img {
   padding: 15px 15px 15px 20px;
   text-align: center;
 }
+.helpfull-links {
+  margin-bottom: 60px;
+}
+/* triage page end*/
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -141,5 +143,14 @@ nav .active {
   font-size: 20px;
 }
 .footer-menu li .dropdown-trigger {
-  margin-left: 30px;
+  margin-left: 60px;
+}
+.footer-menu li a {
+  cursor: pointer;
+  position: relative;
+}
+.footer-menu li a i {
+  position: absolute;
+  left: -25px;
+  top: 1px;
 }

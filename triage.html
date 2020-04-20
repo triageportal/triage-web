@@ -6,7 +6,7 @@
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triage Portal</title>
 </head>
@@ -44,6 +44,14 @@
                     </div>
                     
                 </div>
+                <dir class="helpfull-links">
+                    <h6 v-if="triage.links.length">Helpfull links</h6>
+                    <ul>
+                        <li v-for="link in triage.links">
+                            <a :href="link.link">{{link.description}}</a>
+                        </li>
+                    </ul>
+                </dir>
             </div>
             
         </div>
@@ -54,15 +62,16 @@
 
                 © 2020 Triage Portal
                 <ul class="right footer-menu">
-                    <li><a class="grey-text text-lighten-4" href="https://triagetest.startng.app/#/contactus">{{footer.contactUs}}</a></li>
+                    <!-- <li><a class="grey-text text-lighten-4" href="http://triagetest.startng.app/#/remote/ru/121212"  target="_blank">remote</a></li> -->
+                    <li><a class="grey-text text-lighten-4" @click="contactUs()" target="_blank">{{footer.contactUs}}</a></li>
                     <li><a class="grey-text text-lighten-4 right dropdown-trigger" data-target='translateDropDown' >
-                        <i class="material-icons">translate</i>
+                        <i class="material-icons">translate</i><span> - {{language}}</span>
                     </a></li>
                 </ul>
                 <ul id='translateDropDown' class='dropdown-content'>
-                    <li><a @click="translate('en')">English</a></li>
-                    <li><a @click="translate('es')">Espanol</a></li>
-                    <li><a @click="translate('ru')">Pусский</a></li>
+                    <li><a @click="translate('ENG')">English</a></li>
+                    <li><a @click="translate('ESP')">Espanol</a></li>
+                    <li><a @click="translate('RUS')">Pусский</a></li>
                   </ul>
             </div>
         </div>
