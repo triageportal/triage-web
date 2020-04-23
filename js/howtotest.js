@@ -6,13 +6,13 @@ new Vue({
         }
     },
     created: function() {
-        if (Vue.getTranslate()) {
-            const page = Vue.getTranslate().pages.howToTest;
-            this.title = page.title;
-          }
-          let self = this;
-          eventBus.$on('portal', function(res){
-            self.title = res.pages.howToTest.title;
-          });
+        const page = Vue.getTranslate(howToTest);
+        this.title = page.title;
+
+        let self = this;
+        eventBus.$on('language', function(){
+            const page = Vue.getTranslate(howToTest);
+            self.title = page.title;
+        });
     }
 })

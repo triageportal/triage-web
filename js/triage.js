@@ -12,6 +12,7 @@ var triageAcssEn = {
             img: '/images/photo_2020-04-15_14-36-41.jpg'
         }
     ],
+    helpFullLinks: 'Helpfull links',
     links: [
         {
             description: 'link1',
@@ -45,6 +46,7 @@ var triageAcssRu = {
             img: '/images/photo_2020-04-15_14-36-41.jpg'
         }
     ],
+    helpFullLinks: 'полезные ссылки',
     links: [
         {
             description: 'link1',
@@ -78,6 +80,7 @@ var triageEjaculEn = {
             img: '/images/photo_2020-04-15_14-36-41.jpg'
         }
     ],
+    helpFullLinks: 'Helpfull links',
     links: [
         
     ]
@@ -96,6 +99,7 @@ var triageEjaculRu = {
             img: '/images/photo_2020-04-15_14-36-41.jpg'
         }
     ],
+    helpFullLinks: 'полезные ссылки',
     links: [
         
     ]
@@ -139,7 +143,6 @@ new Vue({
         this.getTriage(triageId, language);
         let self = this;
         eventBus.$on('language', function(language){
-            console.log(triageId, language);
             self.getTriage(triageId, language);
         });
     }
