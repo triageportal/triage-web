@@ -41,6 +41,12 @@ Vue.use(langService);
         }
       }
     },
+    methods: {
+      login: function(){
+        const language = localStorage.getItem('triage-language');
+        window.location.href = "http://localhost:3434/#/login/" + language;
+      }
+    },
     created: function() {
       this.nav = Vue.getTranslate(sharedPage).nav
       
@@ -60,6 +66,12 @@ Vue.use(langService);
           howToTest: 'How to test',
           login: 'Login'          
         }
+      }
+    },
+    methods: {
+      login: function(){
+        const language = localStorage.getItem('triage-language');
+        window.location.href = "http://localhost:3434/#/login/" + language;
       }
     },
     created: function() {

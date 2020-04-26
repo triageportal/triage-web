@@ -28,7 +28,7 @@
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="triages.html">{{nav.tests}}</a></li>
                         <li><a href="howtotest.html">{{nav.howToTest}}</a></li>
-                        <li><a href="https://triagetest.startng.app">{{nav.login}}</a></li>
+                        <li><a @click="login()">{{nav.login}}</a></li>
                     </ul>
                 </div>
                 
@@ -36,7 +36,7 @@
             <ul class="sidenav" id="mobile-links">
                 <li><a href="triages.html">{{sidenav.tests}}</a></li>
                 <li><a href="howtotest.html">{{sidenav.howToTest}}</a></li>
-                <li><a href="https://triagetest.startng.app">{{sidenav.login}}</a></li>
+                <li><a @click="login()">{{sidenav.login}}</a></li>
             </ul>
             
 
@@ -66,7 +66,7 @@
 
                     © 2020 Triage Portal
                     <ul class="right footer-menu">
-                        <!-- <li><a class="grey-text text-lighten-4" href="http://triagetest.startng.app/#/remote/ru/121212"  target="_blank">remote</a></li> -->
+                        <li><a class="grey-text text-lighten-4" href="http://localhost:3434/#/remote/ru/121212"  target="_blank">remote</a></li>
                         <li><a class="grey-text text-lighten-4" @click="contactUs()" target="_blank">{{footer.contactUs}}</a></li>
                         <li><a class="grey-text text-lighten-4 right dropdown-trigger" data-target='translateDropDown' >
                             <i class="material-icons">translate</i><span> - {{language}}</span>
