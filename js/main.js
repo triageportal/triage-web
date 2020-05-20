@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
           return page.ENG;
         }
-        return false
+        return page.ENG;
       }
     }
 };
@@ -44,12 +44,11 @@ Vue.use(langService);
     methods: {
       login: function(){
         const language = localStorage.getItem('triage-language');
-        window.location.href = "http://localhost:3434/#/login/" + language;
+        window.location.href = "https://triagetest.startng.app/#/login/" + language;
       }
     },
     created: function() {
       this.nav = Vue.getTranslate(sharedPage).nav
-      
       let self = this;
       eventBus.$on('language', function(){
         self.nav = Vue.getTranslate(sharedPage).nav;
@@ -71,7 +70,7 @@ Vue.use(langService);
     methods: {
       login: function(){
         const language = localStorage.getItem('triage-language');
-        window.location.href = "http://localhost:3434/#/login/" + language;
+        window.location.href = "https://triagetest.startng.app/#/login/" + language;
       }
     },
     created: function() {
@@ -113,7 +112,7 @@ Vue.use(langService);
         },
         contactUs: function(){
           const language = localStorage.getItem('triage-language');
-          window.location.href = "http://localhost:3434/#/contactus/" + language;
+          window.location.href = "https://triagetest.startng.app/#/contactus/" + language;
         }
     }
   })
