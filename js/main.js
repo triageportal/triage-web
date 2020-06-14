@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     install: function (Vue) {
       Vue.getTranslate = function (page) {
         console.log(page)
-        const language = localStorage.getItem('triage-language');
+        const language = localStorage.getItem('triage-language');        
         console.log(language)
         if (language && language != "" && page) {
           console.log(page)
@@ -94,11 +94,10 @@ Vue.use(langService);
       }
     },
     created: function() {
-      
-        this.footer = Vue.getTranslate(sharedPage).footer;
-      
-      ///this.langService = localStorage.getItem('triage-language')
-      this.language = localStorage.getItem('triage-language')
+      this.footer = Vue.getTranslate(sharedPage).footer;
+      if (localStorage.getItem('triage-language')) {
+        this.language = localStorage.getItem('triage-language');
+      }
     },
     methods: {
         translate: function(lang){

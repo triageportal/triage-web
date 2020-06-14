@@ -92,6 +92,9 @@ h6 {
   font-feature-settings: 'liga';
 }
 /* Main style*/
+[v-cloak] {
+  display: none;
+}
 html,
 body {
   min-height: 100vh;

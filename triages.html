@@ -16,14 +16,14 @@
         <div class="main">
           <nav class="nav-wrapper indigo" id="navMenu">
             <div class="container">
-                <a href="index.html" class="brand-logo">{{nav.title}}</a>
+                <a href="index.html" class="brand-logo" v-cloak>{{nav.title}}</a>
                 <a class="sidenav-trigger" data-target="mobile-links">
                     <i class="material-icons">menu</i>
                 </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="triages.html" class="active">{{nav.tests}}</a></li>
-                    <li><a href="howtotest.html">{{nav.howToTest}}</a></li>
-                    <li><a href="https://triagetest.startng.app">{{nav.login}}</a></li>
+                    <li><a href="triages.html" class="active" v-cloak>{{nav.tests}}</a></li>
+                    <li><a href="howtotest.html" v-cloak>{{nav.howToTest}}</a></li>
+                    <li><a href="https://triagetest.startng.app" v-cloak>{{nav.login}}</a></li>
                 </ul>
             </div>
             
@@ -34,15 +34,15 @@
             <li><a href="https://triagetest.startng.app">{{sidenav.login}}</a></li>
         </ul>
       <div class="container" id="triagesPage">
-        <h5 class="center-align page-title">{{title}}</h5>
+        <h5 class="center-align page-title" v-cloak>{{title}}</h5>
         <div class="learn-more-tests" id="learn-more-tests">
             <div class="card" v-for="triage in triages">
                 <div class="card-content">
-                    <span class="card-title indigo-text">{{triage.name}}</span>
-                    <p>{{triage.description}}</p>
+                    <span class="card-title indigo-text" v-cloak>{{triage.name}}</span>
+                    <p v-cloak>{{triage.description}}</p>
                 </div>
                 <div class="card-action right-align">
-                    <a v-bind:href="'triage.html?' + triage.id">{{learnMoreButton}}</a>
+                    <a v-bind:href="'triage.html?' + triage.id" v-cloak>{{learnMoreButton}}</a>
                 </div>
             </div>
         </div>
@@ -56,9 +56,9 @@
                 © 2020 Triage Portal
                 <ul class="right footer-menu">
                     <!-- <li><a class="grey-text text-lighten-4" href="http://triagetest.startng.app/#/remote/ru/121212"  target="_blank">remote</a></li> -->
-                    <li><a class="grey-text text-lighten-4" @click="contactUs()" target="_blank">{{footer.contactUs}}</a></li>
+                    <li><a class="grey-text text-lighten-4" @click="contactUs()" target="_blank" v-cloak>{{footer.contactUs}}</a></li>
                     <li><a class="grey-text text-lighten-4 right dropdown-trigger" data-target='translateDropDown' >
-                        <i class="material-icons">translate</i><span> - {{language}}</span>
+                        <i class="material-icons">translate</i><span v-cloak> - {{language}}</span>
                     </a></li>
                 </ul>
                 <ul id='translateDropDown' class='dropdown-content'>
