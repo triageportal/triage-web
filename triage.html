@@ -23,7 +23,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="triages.html" class="active" v-cloak>{{nav.tests}}</a></li>
                     <li><a href="howtotest.html" v-cloak>{{nav.howToTest}}</a></li>
-                    <li><a href="https://triagetest.startng.app" v-cloak>{{nav.login}}</a></li>
+                    <li><a @click="login()" v-cloak>{{nav.login}}</a></li>
                 </ul>
             </div>
             
@@ -31,7 +31,7 @@
         <ul class="sidenav" id="mobile-links">
             <li><a href="triages.html">{{sidenav.tests}}</a></li>
             <li><a href="howtotest.html">{{sidenav.howToTest}}</a></li>
-            <li><a href="https://triagetest.startng.app">{{sidenav.login}}</a></li>
+            <li><a @click="login()">{{sidenav.login}}</a></li>
         </ul>
         <div class="container" id="aboutTriage">
             <div class="welcome">
