@@ -93,7 +93,7 @@ h6 {
 }
 /* Main style*/
 [v-cloak] {
-  display: none;
+  display: none!important;
 }
 html,
 body {

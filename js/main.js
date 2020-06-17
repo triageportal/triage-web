@@ -43,7 +43,8 @@ Vue.use(langService);
     },
     methods: {
       login: function(){
-        const language = localStorage.getItem('triage-language');
+        let language = 'ENG';
+        if (localStorage.getItem('triage-language')) language = localStorage.getItem('triage-language');
         window.location.href = "https://triagetest.startng.app/#/login/" + language;
       }
     },
@@ -69,7 +70,8 @@ Vue.use(langService);
     },
     methods: {
       login: function(){
-        const language = localStorage.getItem('triage-language');
+        let language = 'ENG';
+        if (localStorage.getItem('triage-language')) language = localStorage.getItem('triage-language');
         window.location.href = "https://triagetest.startng.app/#/login/" + language;
       }
     },
@@ -101,9 +103,6 @@ Vue.use(langService);
     },
     methods: {
         translate: function(lang){
-          console.log(lang)
-          console.log(localStorage.getItem('triage-language'));
-          
           localStorage.setItem('triage-language', lang); 
           eventBus.$emit('language', lang);       
           this.footer = Vue.getTranslate(sharedPage).footer;
