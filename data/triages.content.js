@@ -1,6 +1,6 @@
 const triagesPage = {
     ENG: {
-        title: 'Triages at your service',
+        title: 'Types of Triage that we offer',
         triages: [
             {
                 id: 1,
